@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<robot name="Compact_Robot_Arm_FUSION_v1[1]" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Compact_Robot_Arm_FUSION_v1[1]_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Compact_Robot_Arm_FUSION_v1[1]_description)/urdf/Compact_Robot_Arm_FUSION_v1[1].trans" />
+<xacro:include filename="$(find Compact_Robot_Arm_FUSION_v1[1]_description)/urdf/Compact_Robot_Arm_FUSION_v1[1].gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.1902180509477239 -0.02861393411142094 -0.18250000000000025" rpy="0 0 0"/>
+    <mass value="0.06738284312753731"/>
+    <inertia ixx="3.4e-05" iyy="6.8e-05" izz="3.5e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Compact_Robot_Arm_FUSION_v1[1]_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Compact_Robot_Arm_FUSION_v1[1]_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
